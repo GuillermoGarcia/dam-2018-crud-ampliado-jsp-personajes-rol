@@ -1,1 +1,87 @@
-# dam-2018-crud-ampliado-jsp-personajes-rol
+# Ampliación CRUD con JSP y BBDD
+
+  Practica ampliada de acceso a bases de datos desde Java, en particular, la operaciones CRUD, alta, listado, modificación y borrado.
+
+# Temática de la Practica
+
+  Continuando la practica anterior, la temática será la gestión de distintas partidas así como de las fichas de personajes de dichas partidas.
+
+# Estructura de la Base de Datos
+
+  Se usaran las siguientes tablas en la base de datos:
+
+  * Partida
+  * Jugador
+  * Personaje
+
+  En la siguiente imagen podemos ver dichas tablas con sus columnas y sus relaciones
+  
+  ![Estructura de las Tablas](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud01.jpg)
+
+# Instalación NetBeans
+
+  Para Instalarlo en NetBeans, copiamos todos los archivos *.jsp, *.css y *.js a nuestra carpeta "Web Pages" del proyecto.
+  Además debemos copiar el Paquete de Clases en la carpeta de "Source Packages" del proyecto.
+
+  Al final nos debe quedar una estructura como la que se ve en la siguiente imagen.
+
+  ![Instalación](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud09.jpg)
+
+# JSP
+
+  La página web esta presentada en una única página desde la cual podemos gestionar las tres entidades (Partidas, Jugadores y Personajes)
+
+## Vista General
+
+  ![Vista General](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud02.png)
+
+  En el margen derecho encontramos los botones para crear nuevas entidades (Partidas, Jugadores y Personajes)
+  En el resto de la página está el listado de todas las partidas, con su información
+  * Nombre de la Partida
+  * Director de la Partida
+  * Descripción de la Partida
+  * Personajes de la Partida (Jugador al que pertenece el Personaje)
+  
+## Gestión de las Partidas.
+
+  Si usamos el botón para añadir una partida nueva, nos aparecerá una ventana emergente, como podéis ver en la siguiente imagen, con un formulario para rellenar los datos de la partida.
+
+  ![Gestión de Partida](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud05.png)
+
+  Esta ventana emergente también aparecerá si pulsamos sobre el botón "Editar Partida" pero con los datos de la partida rellenos.
+
+  ![Gestión de Partida](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud06.png)
+
+  Por último, al lado del botón "Editar Partida", encontramos el botón "Borrar Partida" con el que borramos una partida.
+  _Nota: Si se borra una Partida los Personajes asignados a esa Partida no se borraran sino que quedaran libres._
+
+## Gestión de los Jugadores.
+
+  Si usamos el botón para añadir un nuevo jugador, nos aparecerá una ventana emergente, como podéis ver en la siguiente imagen, con un formulario para rellenar los datos del jugador.
+
+  ![Gestión de Jugador](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud03.png)
+
+  Esta ventana emergente también aparecerá si pulsamos sobre el nombre del Jugador con los datos actuales del jugador, además aparecerá un botón extra para poder borrar el Jugador.
+  _Nota: Un Jugador no podrá ser borrado mientras tenga algún Personaje._
+
+  ![Gestión de Jugador](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud04.png)
+
+## Gestión de los Personajes.
+
+  Si usamos el botón para añadir un nuevo personaje, nos aparecerá una ventana emergente, como podéis ver en la siguiente imagen, con un formulario para rellenar los datos del jugador.
+
+  ![Gestión de Personaje](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud07.png)
+
+  Esta ventana emergente también aparecerá si pulsamos sobre el botón de Editar, de color azul, en la misma linea que el personaje, pero con los datos del personaje rellenos.
+
+  ![Gestión de Personaje](https://github.com/GuillermoGarcia/dam-2018-crud-jsp-personajes-rol/blob/master/jspcrud08.png)
+
+  Si pulsamos sobre el botón de Borrar, de color rojo, en la misma linea que el personaje, se quitará dicho personaje de la partida.
+
+# Próximas Funcionalidades
+
+  Para la siguiente versión se incluirá las siguientes funcionalidades:
+  * Botón de Borrado de Personajes.
+  * Añadir Características al Personaje (Fortaleza, Constitución, Agilidad....)
+  * Listado de Habilidades (Hablar Orco, Usar Objeto, Atacar con arma....)
+  * Asociar Habilidades a cada Personaje con un valor para cada uno
